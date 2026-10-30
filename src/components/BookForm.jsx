@@ -24,5 +24,4 @@ function BookForm({ onAdd }) {
     </form>
   );
 }
-
 export default BookForm;
