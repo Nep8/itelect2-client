@@ -1,13 +1,11 @@
 :root {
   font-family: Inter, Arial, sans-serif;
   color: #f3f4f6;
-  background: #18191f;
+  background: #252831;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  font-optical-sizing: auto;
 }
 
 * {
@@ -17,12 +15,14 @@
 html {
   min-width: 320px;
   min-height: 100%;
+  background: #252831;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  background: #252831;
 }
 
 #root {
