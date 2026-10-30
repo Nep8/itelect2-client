@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function BookForm({ onAdd }) {
+function TaskForm({ onAdd }) {
   const [title, setTitle] = useState("");
 
   function handleSubmit(e) {
@@ -14,14 +14,15 @@ function BookForm({ onAdd }) {
   }
 
   return (
-    <form className="book-form" onSubmit={handleSubmit}>
+    <form className="task-form" onSubmit={handleSubmit}>
       <input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="Title of a new book"
+        placeholder="Title of a new task"
       />
-      <button type="submit">Add book</button>
+      <button type="submit">Add Task</button>
     </form>
   );
 }
-export default BookForm;
+
+export default TaskForm;

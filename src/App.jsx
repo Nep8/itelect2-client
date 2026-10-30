@@ -1,36 +1,37 @@
 import { useState } from "react";
-import BookList from "./components/BookList.jsx";
-import BookForm from "./components/BookForm.jsx";
+import TaskList from "./components/TaskList.jsx";
+import TaskForm from "./components/TaskForm.jsx";
 import "./App.css";
 
-const STARTING_BOOKS = [
-  { id: 1, title: "Noli Me Tangere", available: true },
-  { id: 2, title: "El Filibusterismo", available: true },
-  { id: 3, title: "Florante at Laura", available: true },
-  { id: 4, title: "Ibong Adarna", available: false },
+const STARTING_TASKS = [
+  { id: 1, title: "Read 5 books", dueDate: "2026-11-05", completed: false },
+  { id: 2, title: "Update program", dueDate: "2026-11-07", completed: false },
+  { id: 3, title: "Review code", dueDate: "2026-11-10", completed: false },
+  { id: 4, title: "Submit documentation", dueDate: "2026-11-12", completed: true },
 ];
 
 function App() {
-  const [books, setBooks] = useState(STARTING_BOOKS);
+  const [tasks, setTasks] = useState(STARTING_TASKS);
 
-  function addBook(title) {
-    const newBook = {
+  function addTask(title) {
+    const newTask = {
       id: Date.now(),
       title: title,
-      available: true,
+      dueDate: "",
+      completed: false,
     };
 
-    setBooks([...books, newBook]);
+    setTasks([...tasks, newTask]);
   }
 
   return (
-    <main className="library">
-      <h1>Library</h1>
+    <main className="task-manager">
+      <h1>Task Manager</h1>
       <p className="count">
-        {books.length} books in the catalogue
+        {tasks.length} tasks in total
       </p>
-      <BookForm onAdd={addBook} />
-      <BookList books={books} />
+      <TaskForm onAdd={addTask} />
+      <TaskList tasks={tasks} />
     </main>
   );
 }
