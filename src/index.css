@@ -1,4 +1,9 @@
 :root {
+
+  font-family: Inter, Arial, sans-serif;
+  color: #f3f4f6;
+  background: #252831;
+
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -20,14 +25,18 @@
   color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+
+
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,13 +54,21 @@
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #252831;
+
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
+
 }
 
 body {
   margin: 0;
+  background: #252831;
 }
 
 #root {
