@@ -1,5 +1,5 @@
 :root {
-
+  
   font-family: Inter, Arial, sans-serif;
   color: #f3f4f6;
   background: #252831;
@@ -125,4 +125,5 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
 }

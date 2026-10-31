@@ -59,3 +59,36 @@
   font-size: 14px;
   color: var(--text);
 }
+
+.login-form {
+  display: flex !important;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.login-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #555968;
+  border-radius: 6px;
+  background: #343743;
+  color: #f3f4f6;
+}
+
+.login-form button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #7778e8;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .login-form {
+    flex-direction: column;
+  }
+}
