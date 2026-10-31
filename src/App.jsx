@@ -114,7 +114,6 @@ function App() {
       );
     }
 
-    // The task is saved. Refresh the list from the database.
     const data = await fetchTasks(token);
     setTasks(data);
   }
@@ -124,13 +123,13 @@ function App() {
       <h1>Task Manager</h1>
 
       {token ? (
-        <p className="who">
-          <span>Logged in as {loggedInAs}</span>
-          <button onClick={logOut}>Log out</button>
-        </p>
-      ) : (
-        <LoginForm onLogin={logIn} />
-      )}
+  <p className="who">
+    <span>Logged in as {loggedInAs}</span>
+    <button onClick={logOut}>Log out</button>
+  </p>
+) : (
+  <LoginForm onLogin={logIn} />
+)}
 
       {token && <TaskForm onAdd={addTask} />}
 

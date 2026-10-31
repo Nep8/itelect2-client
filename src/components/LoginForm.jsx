@@ -10,6 +10,7 @@ function LoginForm({ onLogin }) {
 
     try {
       await onLogin(email, password);
+      setError("");
     } catch (err) {
       setError(err.message);
     }
@@ -18,9 +19,11 @@ function LoginForm({ onLogin }) {
   return (
     <form className="login-form" onSubmit={handleSubmit}>
       <input
+        type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
+        required
       />
 
       <input
@@ -28,6 +31,7 @@ function LoginForm({ onLogin }) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
+        required
       />
 
       <button type="submit">Log in</button>
